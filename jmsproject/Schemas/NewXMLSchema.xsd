@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<schema xmlns="http://www.w3.org/2001/XMLSchema" targetNamespace="http://www.example.org/NewXMLSchema" xmlns:tns="http://www.example.org/NewXMLSchema" elementFormDefault="qualified">
+
+    <complexType name="project">
+    	<sequence>
+    		<element name="Member1" type="string"></element>
+    		<element name="Member2" type="string"></element>
+    		<element name="Member3" type="string"></element>
+    	</sequence>
+    </complexType>
+
+
+    
+
+    <complexType name="Project-type">
+    	<sequence>
+    		<element name="Projects" type="tns:project" maxOccurs="unbounded" minOccurs="1"></element>
+    	</sequence>
+    </complexType>
+
+    <element name="Office" type="tns:Project-type"></element>
+    
+</schema>
